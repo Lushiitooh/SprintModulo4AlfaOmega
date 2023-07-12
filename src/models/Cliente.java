@@ -3,7 +3,7 @@ package models;
 
 public class Cliente extends Usuario{
     private String razonSocial;
-    private int RUN;
+    private int RUT;
     private long telefonoRepresentante;
     private String direccionEmpresa;
     private String comunaEmpresa;
@@ -16,12 +16,12 @@ public class Cliente extends Usuario{
         this.razonSocial = razonSocial;
     }
 
-    public int getRUN() {
-        return RUN;
+    public int getRUT() {
+        return RUT;
     }
 
-    public void setRUN(int RUN) {
-        this.RUN = RUN;
+    public void setRUT(int RUT) {
+        this.RUT = RUT;
     }
 
     public long getTelefonoRepresentante() {
@@ -52,7 +52,7 @@ public class Cliente extends Usuario{
         StringBuilder sb = new StringBuilder();
 
         sb.append("Razon social: ").append(this.razonSocial).append("\n")
-                .append("Rut: ").append(this.RUN).append("\n")
+                .append("Rut: ").append(this.RUT).append("\n")
                 .append("Direccion: ").append(this.direccionEmpresa);
 
         return sb.toString();
@@ -73,7 +73,7 @@ public class Cliente extends Usuario{
     public String toString() {
         return "Cliente{" +
                 "razonSocial='" + razonSocial + '\'' +
-                ", RUN=" + RUN +
+                ", RUN=" + RUT +
                 ", telefonoRepresentante=" + telefonoRepresentante +
                 ", direccionEmpresa='" + direccionEmpresa + '\'' +
                 ", comunaEmpresa='" + comunaEmpresa + '\'' +
