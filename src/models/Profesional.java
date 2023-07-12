@@ -28,8 +28,8 @@ public class Profesional extends Usuario{
         StringBuilder sb = new StringBuilder();
 
         sb.append("Titulo: ").append(this.titulo).append("\n")
-                .append("Fecha de ingreso: ").append(this.fechaIngreso.getMonthValue()).append("/")
-                .append(this.fechaIngreso.getDayOfMonth()).append("/")
+                .append("Fecha de ingreso: ").append(this.fechaIngreso.getDayOfMonth()).append("/")
+                .append(this.fechaIngreso.getMonthValue()).append("/")
                 .append(this.fechaIngreso.getYear());
 
         System.out.println(sb);

@@ -1,7 +1,4 @@
-import models.Administrativo;
-import models.Cliente;
-import models.Profesional;
-import models.Usuario;
+import models.*;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -33,10 +30,18 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         u1.setApellido1("Sepulveda");
         u1.setApellido2("Valenzuela");
         u1.setRun(26931652);
-        u1.setFechaNacimiento("2023-04-03");
+        u1.setFechaNacimiento("2023-03-04");
         u1.setTipoUsuario(1);
         u1.setArea("bi");
         u1.setExperienciaPrevia("Algo");
         u1.analizarUsuario();
+
+        Accidente a1 = new Accidente();
+        a1.setFechaAccidente("2023-03-04");
+        System.out.println(a1.getFechaAccidente());
+
+        Profesional p1 = new Profesional();
+        p1.setFechaIngreso("2023-03-04");
+        System.out.println(p1.getFechaIngreso());
     }
 }

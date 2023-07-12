@@ -83,8 +83,8 @@ public class Usuario implements IUsuario {
         sb.append("Nombre: ").append(this.nombre).append("\n")
                 .append("Apellidos: ").append(this.apellido1).append(" ").append(this.apellido2).append("\n")
                 .append("Rut: ").append(this.run).append("\n")
-                .append("fecha de nacimiento: ").append(this.fechaNacimiento.getMonthValue()).append("/")
-                .append(this.fechaNacimiento.getDayOfMonth()).append("/")
+                .append("fecha de nacimiento: ").append(this.fechaNacimiento.getDayOfMonth()).append("/")
+                .append(this.fechaNacimiento.getMonthValue()).append("/")
                 .append(this.fechaNacimiento.getYear());
 
         System.out.println(sb);

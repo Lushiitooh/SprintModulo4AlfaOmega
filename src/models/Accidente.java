@@ -45,16 +45,16 @@ public class Accidente {
         return fechaAccidente;
     }
 
-    public void setFechaAccidente(LocalDate fechaAccidente) {
-        this.fechaAccidente = fechaAccidente;
+    public void setFechaAccidente(String fechaAccidente) {
+        this.fechaAccidente = LocalDate.parse(fechaAccidente);
     }
 
     public LocalTime getHoraAccidente() {
         return horaAccidente;
     }
 
-    public void setHoraAccidente(LocalTime horaAccidente) {
-        this.horaAccidente = horaAccidente;
+    public void setHoraAccidente(String horaAccidente) {
+        this.horaAccidente = LocalTime.parse(horaAccidente);
     }
 
     public String getLugar() {
