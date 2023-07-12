@@ -6,21 +6,14 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class Usuario implements IUsuario {
-    private String nombre;
-    private String apellido1;
+    private String nombre; // obligatorio
+    private String apellido1; // obligatorio
     private String apellido2;
     private LocalDate fechaNacimiento;
     private int run;
+    private int tipoUsuario; // (1 Cliente, 2 Profesional, 3 Administrativo)
 
     public Usuario() {
-    }
-
-    public Usuario(String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run) {
-        this.nombre = nombre;
-        this.apellido1 = apellido1;
-        this.apellido2 = apellido2;
-        this.fechaNacimiento = fechaNacimiento;
-        this.run = run;
     }
 
     public String getNombre() {
@@ -55,6 +48,14 @@ public class Usuario implements IUsuario {
         this.fechaNacimiento = LocalDate.parse(fechaNacimiento);
     }
 
+    public int getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(int tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
     public int getEdad() {
         LocalDate fechaActual = LocalDate.now();
         Period edad = Period.between(this.fechaNacimiento, fechaActual);
@@ -77,7 +78,16 @@ public class Usuario implements IUsuario {
 
     @Override
     public void analizarUsuario() {
+        StringBuilder sb = new StringBuilder();
 
+        sb.append("Nombre: ").append(this.nombre).append("\n")
+                .append("Apellidos: ").append(this.apellido1).append(" ").append(this.apellido2).append("\n")
+                .append("Rut: ").append(this.run).append("\n")
+                .append("fecha de nacimiento: ").append(this.fechaNacimiento.getMonthValue()).append("/")
+                .append(this.fechaNacimiento.getDayOfMonth()).append("/")
+                .append(this.fechaNacimiento.getYear());
+
+        System.out.println(sb);
     }
     @Override
     public String toString() {

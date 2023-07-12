@@ -51,12 +51,22 @@ public class Cliente extends Usuario{
     public String obtenerNombre() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Cliente.").append("\n")
-                .append("Razon social: ").append(this.razonSocial).append("\n")
+        sb.append("Razon social: ").append(this.razonSocial).append("\n")
                 .append("Rut: ").append(this.RUN).append("\n")
                 .append("Direccion: ").append(this.direccionEmpresa);
 
         return sb.toString();
+    }
+
+    @Override
+    public void analizarUsuario() {
+        super.analizarUsuario();
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Direccion: ").append(this.direccionEmpresa).append("\n")
+                .append("Comuna: ").append(this.comunaEmpresa);
+
+        System.out.println(sb);
     }
 
     @Override
