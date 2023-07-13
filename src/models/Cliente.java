@@ -1,6 +1,8 @@
 package models;
 
 
+import java.time.LocalDate;
+
 public class Cliente extends Usuario{
     private String razonSocial;
     private int RUT;
@@ -13,6 +15,15 @@ public class Cliente extends Usuario{
     }
 
     public Cliente(String razonSocial, int RUT, long telefonoRepresentante, String direccionEmpresa, String comunaEmpresa) {
+        this.razonSocial = razonSocial;
+        this.RUT = RUT;
+        this.telefonoRepresentante = telefonoRepresentante;
+        this.direccionEmpresa = direccionEmpresa;
+        this.comunaEmpresa = comunaEmpresa;
+    }
+
+    public Cliente(String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario, String razonSocial, int RUT, long telefonoRepresentante, String direccionEmpresa, String comunaEmpresa) {
+        super(nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);
         this.razonSocial = razonSocial;
         this.RUT = RUT;
         this.telefonoRepresentante = telefonoRepresentante;
@@ -83,12 +94,15 @@ public class Cliente extends Usuario{
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "razonSocial='" + razonSocial + '\'' +
-                ", RUN=" + RUT +
-                ", telefonoRepresentante=" + telefonoRepresentante +
-                ", direccionEmpresa='" + direccionEmpresa + '\'' +
-                ", comunaEmpresa='" + comunaEmpresa + '\'' +
-                '}';
+        return  "nombre: " + this.getNombre() + "\n" +
+                "apellido1: " + this.getApellido1() + "\n" +
+                "apellido2: " + this.getApellido2() + "\n" +
+                "fechaNacimiento: " + this.getFechaNacimiento() + "\n" +
+                "run: " + this.getRun() + "\n" +
+                "razonSocial: " + razonSocial + "\n" +
+                "RUT: " + RUT + "\n" +
+                "telefonoRepresentante: " + telefonoRepresentante + "\n" +
+                "direccionEmpresa: " + direccionEmpresa + "\n" +
+                "comunaEmpresa: " + comunaEmpresa + "\n";
     }
 }
