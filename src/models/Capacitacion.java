@@ -95,8 +95,7 @@ public class Capacitacion {
     }
 
     public void mostrarDetalles() {
-        /*
-        * “La capacitación será en A a las B del día C, y durará D minutos”, en donde A es el lugar, B es la hora, C es el día y D son los minutos.
-        * */
+        System.out.println("La capacitación será en " + lugar + " a las " + hora + " del día " + dia +
+                ", y durará " + duracion + " minutos");
     }
 }
