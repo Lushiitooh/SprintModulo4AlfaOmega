@@ -27,9 +27,9 @@ public class Profesional extends Usuario{
         return fechaIngreso;
     }
 
-    public void setFechaIngreso(LocalDate fechaIngreso) {
+    public void setFechaIngreso(String fechaIngreso) {
 
-        this.fechaIngreso = fechaIngreso;
+        this.fechaIngreso = LocalDate.parse(fechaIngreso);
     }
 
     @Override
