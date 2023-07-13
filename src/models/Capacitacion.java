@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Capacitacion {
-    private int rut;
+    private int id;
     private int rutCliente; // empresa
     private LocalDate dia;
     private LocalTime hora;
@@ -15,8 +15,8 @@ public class Capacitacion {
     public Capacitacion() {
     }
 
-    public Capacitacion(int rut, int rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantAsistentes) {
-        this.rut = rut;
+    public Capacitacion(int id, int rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantAsistentes) {
+        this.id = id;
         this.rutCliente = rutCliente;
         this.dia = dia;
         this.hora = hora;
@@ -25,12 +25,12 @@ public class Capacitacion {
         this.cantAsistentes = cantAsistentes;
     }
 
-    public int getRut() {
-        return rut;
+    public int getId() {
+        return id;
     }
 
-    public void setRut(int rut) {
-        this.rut = rut;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getRutCliente() {
@@ -84,7 +84,7 @@ public class Capacitacion {
     @Override
     public String toString() {
         return "Capacitacion{" +
-                "rut=" + rut +
+                "id=" + id +
                 ", rutCliente=" + rutCliente +
                 ", dia=" + dia +
                 ", hora=" + hora +
