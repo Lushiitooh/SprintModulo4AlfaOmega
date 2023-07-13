@@ -1,9 +1,7 @@
 import models.*;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -102,5 +100,17 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
             System.out.println(l1.get(i));
             System.out.println("");
         }
+
+
+        Capacitacion capa1 = new Capacitacion();
+        capa1.setId(1);
+
+        Capacitacion capa2 = new Capacitacion();
+        capa2.setId(2);
+
+        Contenedor cont1 = new Contenedor();
+        cont1.almacenarCapacitacion(capa1);
+        cont1.almacenarCapacitacion(capa2);
+        cont1.listarCapacitaciones();
     }
 }

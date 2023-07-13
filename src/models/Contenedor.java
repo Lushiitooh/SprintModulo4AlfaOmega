@@ -9,6 +9,10 @@ public class Contenedor {
     private List<Usuario> listaUsuarios;
     private List<Capacitacion> listaCapacitaciones;
 
+    public Contenedor() {
+        this.listaCapacitaciones = new ArrayList<>();
+        this.listaUsuarios = new ArrayList<>();
+    }
 
     public void almacenarCliente(Cliente cliente) {
         listaUsuarios.add(cliente);
@@ -75,12 +79,20 @@ public class Contenedor {
     }
 
     public void almacenarCapacitacion(Capacitacion capacitacion) {
-        listaCapacitaciones.add(capacitacion);
+        this.listaCapacitaciones.add(capacitacion);
     }
 
+    /*
     public void listarCapacitaciones() {
         for (Capacitacion capacitacion : listaCapacitaciones);
         // System.out.println("ID:" + capacitacion.getId());
+    }
+    */
+    public void listarCapacitaciones() {
+        for (int i = 0; i < listaCapacitaciones.size(); i++) {
+            System.out.println("El id de la capacitacion es: " + listaCapacitaciones.get(i).getId());
+            System.out.println("");
+        }
     }
 }
 
