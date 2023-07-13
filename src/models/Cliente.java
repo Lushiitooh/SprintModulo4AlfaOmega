@@ -8,6 +8,18 @@ public class Cliente extends Usuario{
     private String direccionEmpresa;
     private String comunaEmpresa;
 
+
+    public Cliente() {
+    }
+
+    public Cliente(String razonSocial, int RUT, long telefonoRepresentante, String direccionEmpresa, String comunaEmpresa) {
+        this.razonSocial = razonSocial;
+        this.RUT = RUT;
+        this.telefonoRepresentante = telefonoRepresentante;
+        this.direccionEmpresa = direccionEmpresa;
+        this.comunaEmpresa = comunaEmpresa;
+    }
+
     public String getRazonSocial() {
         return razonSocial;
     }
