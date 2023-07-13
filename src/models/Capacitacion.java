@@ -106,5 +106,6 @@ public class Capacitacion {
                 .append("Y durara. ").append(this.duracion).append(" minutos.");
 
         System.out.println(sb);
+
     }
 }

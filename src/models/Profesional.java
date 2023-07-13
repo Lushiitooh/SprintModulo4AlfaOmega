@@ -9,7 +9,8 @@ public class Profesional extends Usuario{
     public Profesional() {
     }
 
-    public Profesional(String titulo, LocalDate fechaIngreso) {
+    public Profesional(String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario, String titulo, LocalDate fechaIngreso) {
+        super(nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);
         this.titulo = titulo;
         this.fechaIngreso = fechaIngreso;
     }
@@ -41,5 +42,13 @@ public class Profesional extends Usuario{
                 .append(this.fechaIngreso.getYear());
 
         System.out.println(sb);
+    }
+
+    @Override
+    public String toString() {
+        return "Profesional{" +
+                "titulo='" + titulo + '\'' +
+                ", fechaIngreso=" + fechaIngreso +
+                '}';
     }
 }

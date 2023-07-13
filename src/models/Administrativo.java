@@ -1,5 +1,7 @@
 package models;
 
+import java.time.LocalDate;
+
 public class Administrativo extends Usuario{
 
     private String area; // (minimo 5 max 20 caracteres) obligatorio
@@ -8,7 +10,8 @@ public class Administrativo extends Usuario{
     public Administrativo() {
     }
 
-    public Administrativo(String area, String experienciaPrevia) {
+    public Administrativo(String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario, String area, String experienciaPrevia) {
+        super(nombre, apellido1, apellido2, fechaNacimiento, run, tipoUsuario);
         this.area = area;
         this.experienciaPrevia = experienciaPrevia;
     }
