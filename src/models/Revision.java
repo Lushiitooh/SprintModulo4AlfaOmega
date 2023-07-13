@@ -2,7 +2,7 @@ package models;
 
 public class Revision {
     private int id;
-    private int visitaTerrenoID; // - obligatorio (Asocia revisión a Visita a Terreno)
+    private VisitaTerreno visitaTerrenoID; // - obligatorio (Asocia revisión a Visita a Terreno)
     private String tipoRevision; // (es el tipo de revisión que se hará en la visita a terreno) obligatorio
     private String detalle; // (min 10 max 200 caract.) obligatorio
     private int estado; // (1 Aprobado, 2 Con Observaciones, 3 No Aprueba)
@@ -10,7 +10,7 @@ public class Revision {
     public Revision() {
     }
 
-    public Revision(int id, int visitaTerrenoID, String tipoRevision, String detalle, int estado) {
+    public Revision(int id, VisitaTerreno visitaTerrenoID, String tipoRevision, String detalle, int estado) {
         this.id = id;
         this.visitaTerrenoID = visitaTerrenoID;
         this.tipoRevision = tipoRevision;
@@ -26,11 +26,11 @@ public class Revision {
         this.id = id;
     }
 
-    public int getVisitaTerrenoID() {
+    public VisitaTerreno getVisitaTerrenoID() {
         return visitaTerrenoID;
     }
 
-    public void setVisitaTerrenoID(int visitaTerrenoID) {
+    public void setVisitaTerrenoID(VisitaTerreno visitaTerrenoID) {
         this.visitaTerrenoID = visitaTerrenoID;
     }
 
@@ -62,7 +62,7 @@ public class Revision {
     public String toString() {
         return "Revision{" +
                 "id=" + id +
-                ", visitaTerrenoID=" + visitaTerrenoID +
+                ", visitaTerrenoID=" + visitaTerrenoID.getId() +
                 ", tipoRevision='" + tipoRevision + '\'' +
                 ", detalle='" + detalle + '\'' +
                 ", estado=" + estado +

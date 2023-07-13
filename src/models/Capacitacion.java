@@ -2,10 +2,11 @@ package models;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Random;
 
 public class Capacitacion {
     private int id;
-    private int rutCliente; // empresa
+    private Cliente rutCliente; // empresa
     private LocalDate dia;
     private LocalTime hora;
     private String lugar; // 10 a 50 caracteres obligatorios.
@@ -13,9 +14,11 @@ public class Capacitacion {
     private int cantAsistentes; // <1000 obligatorio
 
     public Capacitacion() {
+        Random rd = new Random();
+        this.cantAsistentes = rd.nextInt(1, 999);
     }
 
-    public Capacitacion(int id, int rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantAsistentes) {
+    public Capacitacion(int id, Cliente rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantAsistentes) {
         this.id = id;
         this.rutCliente = rutCliente;
         this.dia = dia;
@@ -33,11 +36,11 @@ public class Capacitacion {
         this.id = id;
     }
 
-    public int getRutCliente() {
+    public Cliente getRutCliente() {
         return rutCliente;
     }
 
-    public void setRutCliente(int rutCliente) {
+    public void setRutCliente(Cliente rutCliente) {
         this.rutCliente = rutCliente;
     }
 
@@ -85,7 +88,7 @@ public class Capacitacion {
     public String toString() {
         return "Capacitacion{" +
                 "id=" + id +
-                ", rutCliente=" + rutCliente +
+                ", rutCliente=" + rutCliente.getRUT() +
                 ", dia=" + dia +
                 ", hora=" + hora +
                 ", lugar='" + lugar + '\'' +
@@ -95,8 +98,13 @@ public class Capacitacion {
     }
 
     public void mostrarDetalles() {
-        /*
-        * “La capacitación será en A a las B del día C, y durará D minutos”, en donde A es el lugar, B es la hora, C es el día y D son los minutos.
-        * */
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("La capacitacion sera en: ").append(this.lugar).append("\n")
+                .append("A las: ").append(this.hora).append(" horas").append("\n")
+                .append("El dia: ").append(this.dia).append("\n")
+                .append("Y durara. ").append(this.duracion).append(" minutos.");
+
+        System.out.println(sb);
     }
 }

@@ -5,7 +5,7 @@ import java.time.LocalTime;
 
 public class Accidente {
     private int id; // obligatorio
-    private int rutCliente; // empresa
+    private Cliente rutCliente; // empresa
     private LocalDate fechaAccidente; // (DD/MM/AAAA) obligatorio
     private LocalTime horaAccidente; // (HH:MM) obligatorio
     private String lugar; // 10 a 50 caracteres obligatorios.
@@ -15,7 +15,7 @@ public class Accidente {
     public Accidente() {
     }
 
-    public Accidente(int id, int rutCliente, LocalDate fechaAccidente, LocalTime horaAccidente, String lugar, String causasAccidente, String consecuenciasAccidente) {
+    public Accidente(int id, Cliente rutCliente, LocalDate fechaAccidente, LocalTime horaAccidente, String lugar, String causasAccidente, String consecuenciasAccidente) {
         this.id = id;
         this.rutCliente = rutCliente;
         this.fechaAccidente = fechaAccidente;
@@ -33,11 +33,11 @@ public class Accidente {
         this.id = id;
     }
 
-    public int getRutCliente() {
+    public Cliente getRutCliente() {
         return rutCliente;
     }
 
-    public void setRutCliente(int rutCliente) {
+    public void setRutCliente(Cliente rutCliente) {
         this.rutCliente = rutCliente;
     }
 
@@ -85,7 +85,7 @@ public class Accidente {
     public String toString() {
         return "Accidente{" +
                 "id=" + id +
-                ", rutCliente=" + rutCliente +
+                ", rutCliente=" + rutCliente.getRUT() +
                 ", fechaAccidente=" + fechaAccidente +
                 ", horaAccidente=" + horaAccidente +
                 ", lugar='" + lugar + '\'' +

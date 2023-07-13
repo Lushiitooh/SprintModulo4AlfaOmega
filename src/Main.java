@@ -45,5 +45,11 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         Profesional p1 = new Profesional();
         p1.setFechaIngreso("2023-03-04");
         System.out.println(p1.getFechaIngreso());
+
+        Cliente c1 = new Cliente();
+        c1.setRUT(269316527);
+        Capacitacion cp1 = new Capacitacion();
+        cp1.setRutCliente(c1);
+        System.out.println(cp1);
     }
 }

@@ -5,7 +5,7 @@ import java.time.LocalTime;
 
 public class VisitaTerreno {
     private int id; // obligatorio
-    private int rutCliente; // obligatorio
+    private Cliente rutCliente; // obligatorio
     private LocalDate fechaVisita; // (DD/MM/AAAA)
     private LocalTime horaVisita; // (HH:MM:SS)
     private String lugar; // (min 5 max 50 caracteres) obligatorio
@@ -14,7 +14,7 @@ public class VisitaTerreno {
     public VisitaTerreno() {
     }
 
-    public VisitaTerreno(int id, int rutCliente, LocalDate fechaVisita, LocalTime horaVisita, String lugar, String comentarios) {
+    public VisitaTerreno(int id, Cliente rutCliente, LocalDate fechaVisita, LocalTime horaVisita, String lugar, String comentarios) {
         this.id = id;
         this.rutCliente = rutCliente;
         this.fechaVisita = fechaVisita;
@@ -31,11 +31,11 @@ public class VisitaTerreno {
         this.id = id;
     }
 
-    public int getRutCliente() {
+    public Cliente getRutCliente() {
         return rutCliente;
     }
 
-    public void setRutCliente(int rutCliente) {
+    public void setRutCliente(Cliente rutCliente) {
         this.rutCliente = rutCliente;
     }
 
@@ -75,7 +75,7 @@ public class VisitaTerreno {
     public String toString() {
         return "VisitaTerreno{" +
                 "id=" + id +
-                ", rutCliente=" + rutCliente +
+                ", rutCliente=" + rutCliente.getRUT() +
                 ", fechaVisita=" + fechaVisita +
                 ", horaVisita=" + horaVisita +
                 ", lugar='" + lugar + '\'' +
