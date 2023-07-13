@@ -24,6 +24,8 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
 - Instanciar 5 objetos por cada tipo y probar el menú completo.
         * */
 
+
+
         Administrativo u1 = new Administrativo();
 
         u1.setNombre("Andres");
