@@ -5,6 +5,15 @@ import java.util.List;
 public class Contenedor {
     private List<Usuario> listaUsuarios;
     private List<Capacitacion> listaCapacitaciones;
+    public void almacenarCliente(Cliente cliente) {
+        listaUsuarios.add(cliente);
+    }
+    public void almacenarProfesional(Profesional profesional) {
+        listaUsuarios.add(profesional);
+    }
+    public void almacenarAdministrativo(Administrativo administrativo) {
+        listaUsuarios.add(administrativo);
+    }
 
     /*
     * Métodos
