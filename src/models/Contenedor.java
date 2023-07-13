@@ -78,10 +78,10 @@ public class Contenedor {
         listaCapacitaciones.add(capacitacion);
     }
 
-
-
-
-
+    public void listarCapacitaciones() {
+        for (Capacitacion capacitacion : listaCapacitaciones);
+        // System.out.println("ID:" + capacitacion.getId());
+    }
 }
 
 
