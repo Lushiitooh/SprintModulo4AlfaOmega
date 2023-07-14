@@ -11,7 +11,11 @@ public class Main {
         String nombre = sc.next();
         System.out.println("Ingrese apellido: ");
         String apellido = sc.next();
+
         System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
+
+        System.out.println("Ingrese su fecha de nacimiento(año-mes-dia): ");
+
         String fechaNac = sc.next();
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
@@ -339,14 +343,10 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
                 default:
                     System.out.println("Ingrese una opcion válida");
                     break;
-
-
             }
             System.out.println();
 
         }while (opcion != 9);
-
-
 
     }
 }
