@@ -79,22 +79,22 @@ public class Main {
         Administrativo administrativo = new Administrativo();
 
         System.out.println("Ingrese nombre: ");
-        String nombre = sc.nextLine();
+        String nombre = sc.next();
 
         System.out.println("Ingrese apellido: ");
-        String apellido1 = sc.nextLine();
+        String apellido1 = sc.next();
 
         System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
-        String fechaNac = sc.nextLine();
+        String fechaNac = sc.next();
 
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
 
         System.out.println("Ingrese area");
-        String area = sc.nextLine();
+        String area = sc.next();
 
         System.out.println("Ingrese experiencia previa: ");
-        String experiencia = sc.nextLine();
+        String experiencia = sc.next();
 
         administrativo.setNombre(nombre);
         administrativo.setApellido1(apellido1);
