@@ -1,5 +1,6 @@
 import models.*;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -70,6 +71,41 @@ public class Main {
         profesional.setTitulo(titulo);
         profesional.setFechaIngreso(fechaIngreso);
         contenedor.almacenarProfesional(profesional);
+
+        return contenedor;
+    }
+
+    private static Contenedor crearAdministrativo(Contenedor contenedor){
+        Scanner sc = new Scanner(System.in);
+        Administrativo administrativo = new Administrativo();
+
+        System.out.println("Ingrese nombre: ");
+        String nombre = sc.nextLine();
+
+        System.out.println("Ingrese apellido: ");
+        String apellido1 = sc.nextLine();
+
+        System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
+        String fechaNac = sc.nextLine();
+
+        System.out.println("Ingrese su numero de run: ");
+        int run = sc.nextInt();
+
+        System.out.println("Ingrese area");
+        String area = sc.nextLine();
+
+        System.out.println("Ingrese experiencia previa: ");
+        String experiencia = sc.nextLine();
+
+        administrativo.setNombre(nombre);
+        administrativo.setApellido1(apellido1);
+        administrativo.setFechaNacimiento(fechaNac);
+        administrativo.setRun(run);
+        administrativo.setTipoUsuario(3);
+        administrativo.setArea(area);
+        administrativo.setExperienciaPrevia(experiencia);
+
+        contenedor.almacenarAdministrativo(administrativo);
 
         return contenedor;
     }
@@ -297,7 +333,6 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
                 case 1:
                     System.out.println("Almacenar Cliente");
                     crearCliente(contenedor);
-
                     System.out.println("Cliente Almacenado");
                     break;
                 case 2:
@@ -307,8 +342,7 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
                     break;
                 case 3:
                     System.out.println("Almacenar Administrativo");
-                  //  Administrativo nuevoAdministrativo = crearAdministrativo(sc);
-                    //contenedor.almacenarProfesional(nuevoAdministrativo);
+                    crearAdministrativo(contenedor);
                     System.out.println("Administrativo Almacenado");
                     break;
                 case 4:
