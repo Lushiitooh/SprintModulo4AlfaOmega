@@ -1,5 +1,7 @@
 import models.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class Main {
@@ -12,11 +14,21 @@ public class Main {
         System.out.println("Ingrese apellido: ");
         String apellido = sc.next();
 
-        System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
+        String fechaNac = "";
+        boolean fechaValida = false;
 
-        System.out.println("Ingrese su fecha de nacimiento(año-mes-dia): ");
+        while (!fechaValida) {
+            System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
+            fechaNac = sc.next();
 
-        String fechaNac = sc.next();
+            try {
+                LocalDate.parse(fechaNac);
+                fechaValida = true;
+            } catch (DateTimeParseException e) {
+                System.out.println("Fecha inválida. Intente nuevamente.");
+            }
+        }
+
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
         System.out.println("Razon social: ");
@@ -28,7 +40,7 @@ public class Main {
         System.out.println("Ingrese direccion empresa: ");
         String direccionEmpresa = sc.next();
         System.out.println("Ingrese comuna: ");
-        String comuna = sc.nextLine();
+        String comuna = sc.next();
 
         cliente.setNombre(nombre);
         cliente.setApellido1(apellido);
@@ -90,11 +102,35 @@ public class Main {
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
 
-        System.out.println("Ingrese area");
-        String area = sc.next();
+        String area = "";
+        boolean areaValida = false;
 
-        System.out.println("Ingrese experiencia previa: ");
-        String experiencia = sc.next();
+        while(!areaValida){
+            System.out.println("Ingrese area: ");
+            area = sc.next();
+
+            if(area.length() >= 5 && area.length() <= 20){
+                areaValida = true;
+            } else {
+                System.out.println("El área debe contener mínimo 5 y máximo 20 caracteres.");
+            }
+        }
+
+
+        String experiencia = "";
+        boolean expValida = false;
+
+        while(!expValida){
+            System.out.println("Ingrese experiencia previa: ");
+            experiencia = sc.next();
+
+            if(experiencia.length() <= 100){
+                expValida = true;
+            } else {
+                System.out.println("Se permiten máximo 100 caracteres, intente nuevamente.");
+            }
+        }
+
 
         administrativo.setNombre(nombre);
         administrativo.setApellido1(apellido1);
