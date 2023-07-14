@@ -11,7 +11,7 @@ public class Main {
         String nombre = sc.next();
         System.out.println("Ingrese apellido: ");
         String apellido = sc.next();
-        System.out.println("Ingrese su fecha de nacimiento: ");
+        System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
         String fechaNac = sc.next();
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
@@ -37,6 +37,35 @@ public class Main {
         cliente.setDireccionEmpresa(direccionEmpresa);
         cliente.setComunaEmpresa(comuna);
         contenedor.almacenarCliente(cliente);
+
+        return contenedor;
+    }
+
+    private static Contenedor crearProfesional(Contenedor contenedor) {
+        Scanner sc = new Scanner(System.in);
+        Profesional profesional = new Profesional();
+
+        System.out.println("Ingrese nombre: ");
+        String nombre = sc.next();
+        System.out.println("Ingrese apellido: ");
+        String apellido = sc.next();
+        System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
+        String fechaNac = sc.next();
+        System.out.println("Ingrese su numero de run: ");
+        int run = sc.nextInt();
+        System.out.println("Ingrese título: ");
+        String titulo = sc.next();
+        System.out.println("Ingrese fecha de ingreso: ");
+        String fechaIngreso = sc.next();
+
+        profesional.setNombre(nombre);
+        profesional.setApellido1(apellido);
+        profesional.setFechaNacimiento(fechaNac);
+        profesional.setRun(run);
+        profesional.setTipoUsuario(2);
+        profesional.setTitulo(titulo);
+        profesional.setFechaIngreso(fechaIngreso);
+        contenedor.almacenarProfesional(profesional);
 
         return contenedor;
     }
@@ -264,12 +293,12 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
                 case 1:
                     System.out.println("Almacenar Cliente");
                     crearCliente(contenedor);
+
                     System.out.println("Cliente Almacenado");
                     break;
                 case 2:
                     System.out.println("Almacenar Profesional");
-                 //   Profesional nuevoProfesional = crearProfesional(sc);
-                   // contenedor.almacenarProfesional(nuevoProfesional);
+                    crearProfesional(contenedor);
                     System.out.println("Profesional Almacenado");
                     break;
                 case 3:
