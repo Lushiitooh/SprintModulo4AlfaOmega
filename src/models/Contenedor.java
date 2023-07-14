@@ -18,10 +18,10 @@ public class Contenedor {
         this.listaUsuarios.add(cliente);
     }
     public void almacenarProfesional(Profesional profesional) {
-        listaUsuarios.add(profesional);
+        this.listaUsuarios.add(profesional);
     }
     public void almacenarAdministrativo(Administrativo administrativo) {
-        listaUsuarios.add(administrativo);
+        this.listaUsuarios.add(administrativo);
     }
 
     public void eliminarUsuario(int run) {
@@ -51,11 +51,11 @@ public class Contenedor {
     public void listarUsuariosPorTipo(int tipoUsuario) {
 
 
-        for (IUsuario usuario : listaUsuarios) {
+        for (Usuario usuario : listaUsuarios) {
 
             if (usuario.getTipoUsuario() == tipoUsuario) {
                 System.out.println("Nombre: " + usuario.getNombre());
-                System.out.println("Apellido: " + usuario.getApellido1() + usuario.getApellido2());
+                System.out.println("Apellido: " + usuario.getApellido1() + " " + usuario.getApellido2());
                 System.out.println("Run: " + usuario.getRun());
                 System.out.println("Tipo de Usuario: " + usuario.getTipoUsuario());
                 if (usuario instanceof Cliente){
