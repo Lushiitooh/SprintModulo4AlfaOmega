@@ -108,6 +108,45 @@ public class Main {
 
         return contenedor;
     }
+
+    private static Contenedor crearCapacitacion(Contenedor contenedor){
+        Capacitacion capacitacion = new Capacitacion();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingrese id: ");
+        int id = sc.nextInt();
+
+        System.out.println("Ingrese rut de cliente: ");
+        int rut = sc.nextInt();
+
+        System.out.println("Ingrese día (año-mes-dia): ");
+        String dia = sc.next();
+
+        System.out.println("Ingrese hora: ");
+        String hora = sc.next();
+
+        System.out.println("Ingrese lugar: ");
+        String lugar = sc.next();
+
+        System.out.println("Ingrese duración: ");
+        int duracion = sc.nextInt();
+
+        System.out.println("Ingrese cantidad de asistentes: ");
+        int cantAsistentes = sc.nextInt();
+
+        capacitacion.setId(id);
+        capacitacion.setRutCliente(rut);
+        capacitacion.setDia(dia);
+        capacitacion.setHora(hora);
+        capacitacion.setLugar(lugar);
+        capacitacion.setDuracion(duracion);
+        capacitacion.setCantAsistentes(cantAsistentes);
+
+        contenedor.almacenarCapacitacion(capacitacion);
+
+        return contenedor;
+    }
+
     public static void main(String[] args) {
         Contenedor contenedor = new Contenedor();
         Scanner sc = new Scanner(System.in);
@@ -343,8 +382,7 @@ public class Main {
                     break;
                 case 7:
                     System.out.println("Almacenar Capacitacion");
-                 //   Capacitacion nuevoCapacitacion = crearCapacitacion(sc);
-                   // contenedor.almacenarCapacitacion(nuevoCapacitacion);
+                    crearCapacitacion(contenedor);
                     System.out.println("Capacitacion Almacenada");
                     break;
                 case 8:

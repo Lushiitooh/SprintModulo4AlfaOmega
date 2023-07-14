@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Capacitacion {
     private int id;
-    private Cliente rutCliente; // empresa
+    private int rutCliente; // empresa
     private LocalDate dia;
     private LocalTime hora;
     private String lugar; // 10 a 50 caracteres obligatorios.
@@ -18,7 +18,7 @@ public class Capacitacion {
         this.cantAsistentes = rd.nextInt(1, 999);
     }
 
-    public Capacitacion(int id, Cliente rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantAsistentes) {
+    public Capacitacion(int id, int rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantAsistentes) {
         this.id = id;
         this.rutCliente = rutCliente;
         this.dia = dia;
@@ -36,28 +36,26 @@ public class Capacitacion {
         this.id = id;
     }
 
-    public Cliente getRutCliente() {
+    public int getRutCliente() {
         return rutCliente;
     }
 
-    public void setRutCliente(Cliente rutCliente) {
-        this.rutCliente = rutCliente;
-    }
+    public void setRutCliente(int rutCliente){  this.rutCliente = rutCliente; }
 
     public LocalDate getDia() {
         return dia;
     }
 
-    public void setDia(LocalDate dia) {
-        this.dia = dia;
+    public void setDia(String dia) {
+        this.dia = LocalDate.parse(dia);
     }
 
     public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(LocalTime hora) {
-        this.hora = hora;
+    public void setHora(String hora) {
+        this.hora = LocalTime.parse(hora);
     }
 
     public String getLugar() {
@@ -88,7 +86,7 @@ public class Capacitacion {
     public String toString() {
         return "Capacitacion{" +
                 "id=" + id +
-                ", rutCliente=" + rutCliente.getRUT() +
+                ", rutCliente=" + rutCliente +
                 ", dia=" + dia +
                 ", hora=" + hora +
                 ", lugar='" + lugar + '\'' +

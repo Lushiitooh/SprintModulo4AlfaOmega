@@ -38,6 +38,10 @@ public class Contenedor {
         }
     }
 
+    public List<Usuario> getListaUsuarios() {
+        return listaUsuarios;
+    }
+
     public void listarUsuariosPorTipo (){
         for (IUsuario usuario : listaUsuarios){
             System.out.println("Nombre: " + usuario.getNombre());
