@@ -16,6 +16,7 @@ public class Contenedor {
 
     public void almacenarCliente(Cliente cliente) {
         listaUsuarios.add(cliente);
+
     }
     public void almacenarProfesional(Profesional profesional) {
         listaUsuarios.add(profesional);

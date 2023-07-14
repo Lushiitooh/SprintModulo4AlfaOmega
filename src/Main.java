@@ -1,7 +1,5 @@
 import models.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -99,7 +97,7 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         p1.setRun(12345678);
         p1.setTipoUsuario(2);
         p1.setTitulo("Prevencionista de Riesgos");
-        p1.setFechaIngreso("05-05-2004");
+        p1.setFechaIngreso("2004-05-05");
 
         Profesional p2 = new Profesional();
         p2.setNombre("Katherine");
@@ -109,7 +107,7 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         p2.setRun(445665444);
         p2.setTipoUsuario(2);
         p2.setTitulo("Programadora Base de Datos");
-        p2.setFechaIngreso("05-05-2020");
+        p2.setFechaIngreso("2004-05-05");
 
         Profesional p3 = new Profesional();
         p3.setNombre("Andres");
@@ -119,7 +117,7 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         p3.setRun(186234567);
         p3.setTipoUsuario(2);
         p3.setTitulo("Directivo de oficina");
-        p3.setFechaIngreso("06-06-2006");
+        p3.setFechaIngreso("2004-05-05");
 
         Profesional p4 = new Profesional();
         p4.setNombre("Katherine");
@@ -129,7 +127,7 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         p4.setRun(12345678);
         p4.setTipoUsuario(2);
         p4.setTitulo("Programadora Base de Datos");
-        p4.setFechaIngreso("05-05-2020");
+        p4.setFechaIngreso("2004-05-05");
 
         Profesional p5 = new Profesional();
         p1.setNombre("Diego");
@@ -139,7 +137,7 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         p1.setRun(12345678);
         p1.setTipoUsuario(2);
         p1.setTitulo("Escapista");
-        p1.setFechaIngreso("07-05-2021");
+        p1.setFechaIngreso("2004-05-05");
 
         Administrativo a1 = new Administrativo();
         a1.setNombre("Diego");
@@ -189,7 +187,7 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         a5.setRun(186234555);
         a5.setTipoUsuario(3);
         a5.setArea("Carcel Calama");
-        a5.setExperienciaPrevia("07-05-2021");
+        a5.setExperienciaPrevia("5 años de Temporada 2");
 
 
 
@@ -224,10 +222,87 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
             System.out.println("9. Salir");
             System.out.println("Ingresar una Opcion");
 
-        }
+            opcion = sc.nextInt();
+            sc.nextLine();
+            switch (opcion){
+                case 1:
+                    System.out.println("Almacenar Cliente");
+                    Cliente nuevoCliente = crearCliente(sc, contenedor);
+                    contenedor.almacenarCliente(nuevoCliente);
+                    System.out.println("Cliente Almacenado");
+                    break;
+                case 2:
+                    System.out.println("Almacenar Profesional");
+                 //   Profesional nuevoProfesional = crearProfesional(sc);
+                   // contenedor.almacenarProfesional(nuevoProfesional);
+                    System.out.println("Profesional Almacenado");
+                    break;
+                case 3:
+                    System.out.println("Almacenar Administrativo");
+                  //  Administrativo nuevoAdministrativo = crearAdministrativo(sc);
+                    //contenedor.almacenarProfesional(nuevoAdministrativo);
+                    System.out.println("Administrativo Almacenado");
+                    break;
+                case 4:
+                    System.out.println("Listar Usuarios");
+                    contenedor.listarUsuarios();
+                    break;
+                case 5:
+                    System.out.println("Listar Usuarios por Tipo");
+                    System.out.println("Ingrese tipo de usuario: 1:Cliente  2:Profesional  3:Administrativo" );
+                    int tipoUsuario = sc.nextInt();
+                    contenedor.listarUsuariosPorTipo(tipoUsuario);
+                    break;
+                case 6:
+                    System.out.println("Eliminar Usuario por Run");
+                    System.out.println("Ingrese el Run que desea eliminar: " );
+                    int run = sc.nextInt();
+                    contenedor.eliminarUsuario(run);
+                    break;
+                case 7:
+                    System.out.println("Almacenar Capacitacion");
+                 //   Capacitacion nuevoCapacitacion = crearCapacitacion(sc);
+                   // contenedor.almacenarCapacitacion(nuevoCapacitacion);
+                    System.out.println("Capacitacion Almacenada");
+                    break;
+                case 8:
+                    System.out.println("Listar Capacitaciones");
+                    contenedor.listarCapacitaciones();
+                    break;
+                case 9:
+                    System.out.println("Hasta Luego");
+                    break;
+                default:
+                    System.out.println("Ingrese una opcion válida");
+                    break;
+
+
+            }
+            System.out.println();
+
+        }while (opcion != 9);
 
 
 
+    }
+
+    private static Cliente crearCliente(Scanner scanner, Contenedor contenedor) {
+        System.out.print("Ingrese la razón social: ");
+        String razonSocial = scanner.nextLine();
+        System.out.print("Ingrese el RUT: ");
+        int rut = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el salto de línea
+        System.out.print("Ingrese el teléfono del representante: ");
+        long telefonoRepresentante = scanner.nextLong();
+        scanner.nextLine(); // Limpiar el salto de línea
+        System.out.print("Ingrese la dirección de la empresa: ");
+        String direccionEmpresa = scanner.nextLine();
+        System.out.print("Ingrese la comuna de la empresa: ");
+        String comunaEmpresa = scanner.nextLine();
+
+       Cliente cliente = new Cliente(razonSocial, rut, telefonoRepresentante, direccionEmpresa, comunaEmpresa);
+       contenedor.almacenarCliente(cliente);
+        return cliente;
     }
 }
 
