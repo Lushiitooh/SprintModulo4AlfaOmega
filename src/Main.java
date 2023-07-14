@@ -3,9 +3,47 @@ import models.*;
 import java.util.Scanner;
 
 public class Main {
+    private static Contenedor crearCliente(Contenedor contenedor) {
+        Scanner sc = new Scanner(System.in);
+        Cliente cliente = new Cliente();
+
+        System.out.println("Ingrese nombre: ");
+        String nombre = sc.next();
+        System.out.println("Ingrese apellido: ");
+        String apellido = sc.next();
+        System.out.println("Ingrese su fecha de nacimiento: ");
+        String fechaNac = sc.next();
+        System.out.println("Ingrese su numero de run: ");
+        int run = sc.nextInt();
+        System.out.println("Razon social: ");
+        String razonSocial = sc.next();
+        System.out.println("Ingrese su rut: ");
+        int rut = sc.nextInt();
+        System.out.println("Ingrese numero de telefono");
+        long telefono = sc.nextLong();
+        System.out.println("Ingrese direccion empresa: ");
+        String direccionEmpresa = sc.next();
+        System.out.println("Ingrese comuna: ");
+        String comuna = sc.nextLine();
+
+        cliente.setNombre(nombre);
+        cliente.setApellido1(apellido);
+        cliente.setFechaNacimiento(fechaNac);
+        cliente.setRun(run);
+        cliente.setTipoUsuario(1);
+        cliente.setRazonSocial(razonSocial);
+        cliente.setRUT(rut);
+        cliente.setTelefonoRepresentante(telefono);
+        cliente.setDireccionEmpresa(direccionEmpresa);
+        cliente.setComunaEmpresa(comuna);
+        contenedor.almacenarCliente(cliente);
+
+        return contenedor;
+    }
     public static void main(String[] args) {
         Contenedor contenedor = new Contenedor();
         Scanner sc = new Scanner(System.in);
+
         int opcion;
 
                 /*
@@ -190,8 +228,6 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
         a5.setExperienciaPrevia("5 años de Temporada 2");
 
 
-
-
         contenedor.almacenarCliente(c1);
         contenedor.almacenarCliente(c2);
         contenedor.almacenarCliente(c3);
@@ -227,8 +263,7 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
             switch (opcion){
                 case 1:
                     System.out.println("Almacenar Cliente");
-                    Cliente nuevoCliente = crearCliente(sc, contenedor);
-                    contenedor.almacenarCliente(nuevoCliente);
+                    crearCliente(contenedor);
                     System.out.println("Cliente Almacenado");
                     break;
                 case 2:
@@ -285,65 +320,4 @@ Si ingresa opción incorrecta, debe avisar y volver a pedir una opción
 
 
     }
-
-    private static Cliente crearCliente(Scanner scanner, Contenedor contenedor) {
-        System.out.print("Ingrese la razón social: ");
-        String razonSocial = scanner.nextLine();
-        System.out.print("Ingrese el RUT: ");
-        int rut = scanner.nextInt();
-        scanner.nextLine(); // Limpiar el salto de línea
-        System.out.print("Ingrese el teléfono del representante: ");
-        long telefonoRepresentante = scanner.nextLong();
-        scanner.nextLine(); // Limpiar el salto de línea
-        System.out.print("Ingrese la dirección de la empresa: ");
-        String direccionEmpresa = scanner.nextLine();
-        System.out.print("Ingrese la comuna de la empresa: ");
-        String comunaEmpresa = scanner.nextLine();
-
-       Cliente cliente = new Cliente(razonSocial, rut, telefonoRepresentante, direccionEmpresa, comunaEmpresa);
-       contenedor.almacenarCliente(cliente);
-        return cliente;
-    }
 }
-
-
- /*List<Cliente> l1 = new ArrayList<>();
-        l1.add(c1);
-        l1.add(c2);
-        l1.add(c3);
-        l1.add(c4);
-        l1.add(c5);
-
-        List<Profesional> l2 = new ArrayList<>();
-        l2.add(p1);
-        l2.add(p2);
-        l2.add(p3);
-        l2.add(p4);
-        l2.add(p5);
-
-        List<Administrativo> l3 = new ArrayList<>();
-        l3.add(a1);
-        l3.add(a2);
-        l3.add(a3);
-        l3.add(a4);
-        l3.add(a5);
-
-        for (int i = 0; i < l1.size(); i++) {
-            int cont = i + 1;
-
-            System.out.println("Cliente " + cont) ;
-            System.out.println(l1.get(i));
-            System.out.println("");
-        }
-        Capacitacion capa1 = new Capacitacion();
-        capa1.setId(1);
-
-        Capacitacion capa2 = new Capacitacion();
-        capa2.setId(2);
-
-        Contenedor cont1 = new Contenedor();
-        cont1.almacenarCapacitacion(capa1);
-        cont1.almacenarCapacitacion(capa2);
-        cont1.listarCapacitaciones();
-
-        */

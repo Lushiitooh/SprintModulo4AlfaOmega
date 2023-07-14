@@ -15,8 +15,7 @@ public class Contenedor {
     }
 
     public void almacenarCliente(Cliente cliente) {
-        listaUsuarios.add(cliente);
-
+        this.listaUsuarios.add(cliente);
     }
     public void almacenarProfesional(Profesional profesional) {
         listaUsuarios.add(profesional);
@@ -30,11 +29,12 @@ public class Contenedor {
     }
 
     public void listarUsuarios (){
-        for (IUsuario usuario : listaUsuarios){
+        for (Usuario usuario : this.listaUsuarios){
             System.out.println("Nombre: " + usuario.getNombre());
             System.out.println("Apellido: " + usuario.getApellido1() + usuario.getApellido2());
             System.out.println("Fecha de nacimiento: " + usuario.getFechaNacimiento());
             System.out.println("Run: " + usuario.getRun());
+            System.out.println("");
         }
     }
 
@@ -44,6 +44,7 @@ public class Contenedor {
             System.out.println("Apellido: " + usuario.getApellido1() + usuario.getApellido2());
             System.out.println("Fecha de nacimiento: " + usuario.getFechaNacimiento());
             System.out.println("Run: " + usuario.getRun());
+            System.out.println("");
         }
     }
 
