@@ -103,7 +103,6 @@ public class Main {
         administrativo.setTipoUsuario(3);
         administrativo.setArea(area);
         administrativo.setExperienciaPrevia(experiencia);
-
         contenedor.almacenarAdministrativo(administrativo);
 
         return contenedor;
@@ -118,30 +117,29 @@ public class Main {
 
         System.out.println("Ingrese rut de cliente: ");
         int rut = sc.nextInt();
-
+        /*
         System.out.println("Ingrese día (año-mes-dia): ");
         String dia = sc.next();
 
         System.out.println("Ingrese hora: ");
         String hora = sc.next();
-
+        */
         System.out.println("Ingrese lugar: ");
         String lugar = sc.next();
 
         System.out.println("Ingrese duración: ");
         int duracion = sc.nextInt();
 
-        System.out.println("Ingrese cantidad de asistentes: ");
-        int cantAsistentes = sc.nextInt();
+        //System.out.println("Ingrese cantidad de asistentes: ");
+        //int cantAsistentes = sc.nextInt();
 
         capacitacion.setId(id);
         capacitacion.setRutCliente(rut);
-        capacitacion.setDia(dia);
-        capacitacion.setHora(hora);
+        //capacitacion.setDia(dia);
+        //capacitacion.setHora(hora);
         capacitacion.setLugar(lugar);
         capacitacion.setDuracion(duracion);
-        capacitacion.setCantAsistentes(cantAsistentes);
-
+        //capacitacion.setCantAsistentes(cantAsistentes);
         contenedor.almacenarCapacitacion(capacitacion);
 
         return contenedor;

@@ -21,8 +21,8 @@ public class Capacitacion {
     public Capacitacion(int id, int rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantAsistentes) {
         this.id = id;
         this.rutCliente = rutCliente;
-        this.dia = dia;
-        this.hora = hora;
+        this.dia = LocalDate.now();
+        this.hora = LocalTime.now();
         this.lugar = lugar;
         this.duracion = duracion;
         this.cantAsistentes = cantAsistentes;
