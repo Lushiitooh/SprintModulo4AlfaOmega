@@ -65,8 +65,20 @@ public class Main {
         String nombre = sc.next();
         System.out.println("Ingrese apellido: ");
         String apellido = sc.next();
-        System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
-        String fechaNac = sc.next();
+        String fechaNac = "";
+        boolean fechaValida = false;
+
+        while (!fechaValida) {
+            System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
+            fechaNac = sc.next();
+
+            try {
+                LocalDate.parse(fechaNac);
+                fechaValida = true;
+            } catch (DateTimeParseException e) {
+                System.out.println("Fecha inválida. Intente nuevamente.");
+            }
+        }
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
         System.out.println("Ingrese título: ");
@@ -96,8 +108,20 @@ public class Main {
         System.out.println("Ingrese apellido: ");
         String apellido1 = sc.next();
 
-        System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
-        String fechaNac = sc.next();
+        String fechaNac = "";
+        boolean fechaValida = false;
+
+        while (!fechaValida) {
+            System.out.println("Ingrese su fecha de nacimiento (año-mes-dia): ");
+            fechaNac = sc.next();
+
+            try {
+                LocalDate.parse(fechaNac);
+                fechaValida = true;
+            } catch (DateTimeParseException e) {
+                System.out.println("Fecha inválida. Intente nuevamente.");
+            }
+        }
 
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
