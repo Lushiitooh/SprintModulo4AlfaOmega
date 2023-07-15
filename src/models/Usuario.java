@@ -38,6 +38,10 @@ public class Usuario implements IUsuario {
         this.tipoUsuario = tipoUsuario;
     }
 
+    /**
+     * Método que devuelve el nombre del usuario
+     * @return el nombre del usuario
+     */
     public String getNombre() {
         return nombre;
     }
