@@ -32,13 +32,13 @@ public class Main {
         Cliente cliente = new Cliente();
 
         System.out.println("Ingrese nombre: ");
-        String nombre = sc.next();
+        String nombre = sc.nextLine();
 
         System.out.println("Ingrese apellido paterno: ");
-        String apellido1 = sc.next();
+        String apellido1 = sc.nextLine();
 
         System.out.println("Ingrese apellido materno: ");
-        String apellido2 = sc.next();
+        String apellido2 = sc.nextLine();
 
         String fechaNac = "";
         boolean fechaValida = false;
@@ -59,16 +59,18 @@ public class Main {
         int run = sc.nextInt();
 
 
+        sc.nextLine();
         System.out.println("Razon social: ");
-        String razonSocial = sc.next();
+        String razonSocial = sc.nextLine();
         System.out.println("Ingrese su rut: ");
         int rut = sc.nextInt();
-        System.out.println("Ingrese numero de telefono");
+        System.out.println("Ingrese numero de teléfono");
         long telefono = sc.nextLong();
-        System.out.println("Ingrese direccion empresa: ");
-        String direccionEmpresa = sc.next();
+        sc.nextLine();
+        System.out.println("Ingrese dirección empresa: ");
+        String direccionEmpresa = sc.nextLine();
         System.out.println("Ingrese comuna: ");
-        String comuna = sc.next();
+        String comuna = sc.nextLine();
 
         cliente.setNombre(nombre);
         cliente.setApellido1(apellido1);
@@ -101,11 +103,11 @@ public class Main {
         Profesional profesional = new Profesional();
 
         System.out.println("Ingrese nombre: ");
-        String nombre = sc.next();
+        String nombre = sc.nextLine();
         System.out.println("Ingrese apellido paterno: ");
-        String apellido1 = sc.next();
+        String apellido1 = sc.nextLine();
         System.out.println("Ingrese apellido materno: ");
-        String apellido2 = sc.next();
+        String apellido2 = sc.nextLine();
         String fechaNac = "";
         boolean fechaValida = false;
 
@@ -122,8 +124,9 @@ public class Main {
         }
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
+        sc.nextLine();
         System.out.println("Ingrese título: ");
-        String titulo = sc.next();
+        String titulo = sc.nextLine();
 
         String fechaIngreso = "";
         boolean fechaValidaProfesional = false;
@@ -168,13 +171,13 @@ public class Main {
         Administrativo administrativo = new Administrativo();
 
         System.out.println("Ingrese nombre: ");
-        String nombre = sc.next();
-
+        String nombre = sc.nextLine();
 
         System.out.println("Ingrese apellido paterno: ");
-        String apellido1 = sc.next();
+        String apellido1 = sc.nextLine();
+
         System.out.println("Ingrese apellido materno: ");
-        String apellido2 = sc.next();
+        String apellido2 = sc.nextLine();
 
         String fechaNac = "";
         boolean fechaValida = false;
@@ -194,12 +197,13 @@ public class Main {
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
 
+        sc.nextLine();
         String area = "";
         boolean areaValida = false;
 
         while(!areaValida){
             System.out.println("Ingrese area: ");
-            area = sc.next();
+            area = sc.nextLine();
 
             if(area.length() >= 5 && area.length() <= 20){
                 areaValida = true;
@@ -214,7 +218,7 @@ public class Main {
 
         while(!expValida){
             System.out.println("Ingrese experiencia previa: ");
-            experiencia = sc.next();
+            experiencia = sc.nextLine();
 
             if(experiencia.length() <= 100){
                 expValida = true;
@@ -259,8 +263,9 @@ public class Main {
         System.out.println("Ingrese duración: ");
         int duracion = sc.nextInt();
 
+        sc.nextLine();
         System.out.println("Ingrese lugar: ");
-        String lugar = sc.next();
+        String lugar = sc.nextLine();
 
 
 
@@ -466,13 +471,13 @@ public class Main {
             System.out.println("1.- Almacenar Cliente");
             System.out.println("2.- Almacenar Profesional");
             System.out.println("3.- Almacenar Administrativo");
-            System.out.println("4. Listar Usuarios");
-            System.out.println("5. Listar Usuarios por tipo");
-            System.out.println("6. Eliminar Usuario por RUN");
-            System.out.println("7. Almacenar Capacitacion");
-            System.out.println("8. Listar Capacitaciones");
-            System.out.println("9. Salir");
-            System.out.println("Ingresar una Opcion");
+            System.out.println("4.- Listar Usuarios");
+            System.out.println("5.- Listar Usuarios por tipo");
+            System.out.println("6.- Eliminar Usuario por RUN");
+            System.out.println("7.- Almacenar Capacitacion");
+            System.out.println("8.- Listar Capacitaciones");
+            System.out.println("9.- Salir");
+            System.out.println("Ingresar una Opción");
 
             opcion = sc.nextInt();
             sc.nextLine();
