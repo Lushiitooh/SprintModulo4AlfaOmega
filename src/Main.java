@@ -233,11 +233,13 @@ public class Main {
         System.out.println("Ingrese rut de cliente: ");
         int rut = sc.nextInt();
 
+        System.out.println("Ingrese duración: ");
+        int duracion = sc.nextInt();
+
         System.out.println("Ingrese lugar: ");
         String lugar = sc.next();
 
-        System.out.println("Ingrese duración: ");
-        int duracion = sc.nextInt();
+
 
 
 

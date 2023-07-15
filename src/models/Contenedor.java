@@ -132,6 +132,9 @@ public class Contenedor {
     public void listarCapacitaciones() {
         for (int i = 0; i < listaCapacitaciones.size(); i++) {
             System.out.println("El id de la capacitacion es: " + listaCapacitaciones.get(i).getId());
+            System.out.println("El rut del cliente es: " + listaCapacitaciones.get(i).getRutCliente());
+            System.out.println("Lugar de capacitacion: " + listaCapacitaciones.get(i).getLugar());
+            System.out.println("La capacitacion tiene una duracion de: " + listaCapacitaciones.get(i).getDuracion() + " minutos");
             System.out.println("");
         }
     }
