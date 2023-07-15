@@ -46,7 +46,6 @@ public class Profesional extends Usuario{
 
         this.fechaIngreso = LocalDate.parse(fechaIngreso);
     }
-
     @Override
     public void analizarUsuario() {
         super.analizarUsuario();
