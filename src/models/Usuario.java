@@ -98,19 +98,27 @@ public class Usuario implements IUsuario {
         System.out.println("Mi edad es: " + getEdad());
     }
 
+    /**
+     * Método que despliega el nombre, el RUN y la fecha de nacimiento del usuario
+     */
     @Override
     public void analizarUsuario() {
         StringBuilder sb = new StringBuilder();
 
         sb.append("Nombre: ").append(this.nombre).append("\n")
                 .append("Apellidos: ").append(this.apellido1).append(" ").append(this.apellido2).append("\n")
-                .append("Rut: ").append(this.run).append("\n")
+                .append("Run: ").append(this.run).append("\n")
                 .append("fecha de nacimiento: ").append(this.fechaNacimiento.getDayOfMonth()).append("/")
                 .append(this.fechaNacimiento.getMonthValue()).append("/")
                 .append(this.fechaNacimiento.getYear());
 
         System.out.println(sb);
     }
+
+    /**
+     * Método que devuelve los datos del usuario
+     * @return datos del usuario
+     */
     @Override
     public String toString() {
         return "Usuario{" +
