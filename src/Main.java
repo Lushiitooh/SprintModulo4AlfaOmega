@@ -4,7 +4,29 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
+/**
+ * Despliega un menú de mantenedor y genera una instancia del contenedor.
+ *
+ * <p>
+ *     El menú muestra 9 opciones, solicita al usuario ingresar una de ellas y, si no es válida, se pide ingresar nuevamente una opción.
+ *     El programa se ejecuta hasta que la opción seleccionada es 9.
+ * </p>
+ *
+ * @author AlfaOmega
+ * @version 1.0
+ * @see Contenedor
+ */
 public class Main {
+    /**
+     * Crea una instancia de Cliente y la agrega a la lista de usuarios del contenedor
+     *
+     * <p>
+     *     Solicita ingresar atributos y crea una instancia de Cliente con los atributos ingresados.
+     *     Posteriormente, agrega la instancia creada a la lista de usuarios del contenedor.
+     * </p>
+     * @param contenedor instancia de Contenedor creada por la clase Main.
+     * @return contenedor ingresado como parámetro, actualizado con el nuevo Cliente.
+     */
     private static Contenedor crearCliente(Contenedor contenedor) {
         Scanner sc = new Scanner(System.in);
         Cliente cliente = new Cliente();
@@ -60,6 +82,16 @@ public class Main {
         return contenedor;
     }
 
+    /**
+     * Crea una instancia de Profesional y la agrega a la lista de usuarios del contenedor
+     *
+     * <p>
+     *     Solicita ingresar atributos y crea una instancia de Profesional con los atributos ingresados.
+     *     Posteriormente, agrega la instancia creada a la lista de usuarios del contenedor.
+     * </p>
+     * @param contenedor instancia de Contenedor creada por la clase Main.
+     * @return contenedor ingresado como parámetro, actualizado con el nuevo Profesional.
+     */
     private static Contenedor crearProfesional(Contenedor contenedor) {
         Scanner sc = new Scanner(System.in);
         Profesional profesional = new Profesional();
@@ -101,6 +133,16 @@ public class Main {
         return contenedor;
     }
 
+    /**
+     * Crea una instancia de Administrativo y la agrega a la lista de usuarios del contenedor
+     *
+     * <p>
+     *     Solicita ingresar atributos y crea una instancia de Administrativo con los atributos ingresados.
+     *     Posteriormente, agrega la instancia creada a la lista de usuarios del contenedor.
+     * </p>
+     * @param contenedor instancia de Contenedor creada por la clase Main.
+     * @return contenedor ingresado como parámetro, actualizado con el nuevo Administrativo.
+     */
     private static Contenedor crearAdministrativo(Contenedor contenedor){
         Scanner sc = new Scanner(System.in);
         Administrativo administrativo = new Administrativo();
@@ -172,6 +214,16 @@ public class Main {
         return contenedor;
     }
 
+    /**
+     * Crea una instancia de Capacitación y la agrega a la lista de capacitaciones del contenedor
+     *
+     * <p>
+     *     Solicita ingresar atributos y crea una instancia de Capacitación con los atributos ingresados.
+     *     Posteriormente, agrega la instancia creada a la lista de capacitaciones del contenedor.
+     * </p>
+     * @param contenedor instancia de Contenedor creada por la clase Main.
+     * @return contenedor ingresado como parámetro, actualizado con la nueva Capacitación.
+     */
     private static Contenedor crearCapacitacion(Contenedor contenedor){
         Capacitacion capacitacion = new Capacitacion();
         Scanner sc = new Scanner(System.in);
