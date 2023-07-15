@@ -5,6 +5,11 @@ import service.IUsuario;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Esta clase contiene los metodos que nos permite que almacenemos los usuarios
+ * @author AlfaOmega
+ * @version 1.0
+ */
 public class Contenedor {
     private List<Usuario> listaUsuarios;
     private List<Capacitacion> listaCapacitaciones;
