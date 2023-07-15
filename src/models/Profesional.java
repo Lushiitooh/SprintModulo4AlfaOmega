@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 /**
  * Esta clase define al usuario como Profesional y extiende de la clase Usuario
+ * @author AlfaOmega
+ * @version 1.0
  */
 public class Profesional extends Usuario{
     private String titulo;
