@@ -159,7 +159,6 @@ public class Main {
             }
         }
 
-
         administrativo.setNombre(nombre);
         administrativo.setApellido1(apellido1);
         administrativo.setFechaNacimiento(fechaNac);
@@ -181,29 +180,19 @@ public class Main {
 
         System.out.println("Ingrese rut de cliente: ");
         int rut = sc.nextInt();
-        /*
-        System.out.println("Ingrese día (año-mes-dia): ");
-        String dia = sc.next();
 
-        System.out.println("Ingrese hora: ");
-        String hora = sc.next();
-        */
         System.out.println("Ingrese lugar: ");
         String lugar = sc.next();
 
         System.out.println("Ingrese duración: ");
         int duracion = sc.nextInt();
 
-        //System.out.println("Ingrese cantidad de asistentes: ");
-        //int cantAsistentes = sc.nextInt();
+
 
         capacitacion.setId(id);
         capacitacion.setRutCliente(rut);
-        //capacitacion.setDia(dia);
-        //capacitacion.setHora(hora);
         capacitacion.setLugar(lugar);
         capacitacion.setDuracion(duracion);
-        //capacitacion.setCantAsistentes(cantAsistentes);
         contenedor.almacenarCapacitacion(capacitacion);
 
         return contenedor;
