@@ -60,7 +60,7 @@ public class Contenedor {
     public void listarUsuarios (){
         for (Usuario usuario : this.listaUsuarios){
             System.out.println("Nombre: " + usuario.getNombre());
-            System.out.println("Apellido: " + usuario.getApellido1());
+            System.out.println("Apellidos: " + usuario.getApellido1() + " " + usuario.getApellido2());
             System.out.println("Fecha de nacimiento: " + usuario.getFechaNacimiento());
             System.out.println("Run: " + usuario.getRun());
             System.out.println("");
@@ -99,7 +99,7 @@ public class Contenedor {
 
             if (usuario.getTipoUsuario() == tipoUsuario) {
                 System.out.println("Nombre: " + usuario.getNombre());
-                System.out.println("Apellido: " + usuario.getApellido1());
+                System.out.println("Apellidos: " + usuario.getApellido1() + " " + usuario.getApellido2());
                 System.out.println("Run: " + usuario.getRun());
                 System.out.println("Tipo de Usuario: " + usuario.getTipoUsuario());
                 if (usuario instanceof Cliente){

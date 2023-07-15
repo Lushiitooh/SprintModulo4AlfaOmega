@@ -34,8 +34,11 @@ public class Main {
         System.out.println("Ingrese nombre: ");
         String nombre = sc.next();
 
-        System.out.println("Ingrese apellido: ");
-        String apellido = sc.next();
+        System.out.println("Ingrese apellido paterno: ");
+        String apellido1 = sc.next();
+
+        System.out.println("Ingrese apellido materno: ");
+        String apellido2 = sc.next();
 
         String fechaNac = "";
         boolean fechaValida = false;
@@ -68,7 +71,8 @@ public class Main {
         String comuna = sc.next();
 
         cliente.setNombre(nombre);
-        cliente.setApellido1(apellido);
+        cliente.setApellido1(apellido1);
+        cliente.setApellido2(apellido2);
         cliente.setFechaNacimiento(fechaNac);
         cliente.setRun(run);
         cliente.setTipoUsuario(1);
@@ -98,8 +102,10 @@ public class Main {
 
         System.out.println("Ingrese nombre: ");
         String nombre = sc.next();
-        System.out.println("Ingrese apellido: ");
-        String apellido = sc.next();
+        System.out.println("Ingrese apellido paterno: ");
+        String apellido1 = sc.next();
+        System.out.println("Ingrese apellido materno: ");
+        String apellido2 = sc.next();
         String fechaNac = "";
         boolean fechaValida = false;
 
@@ -135,7 +141,8 @@ public class Main {
         }
 
         profesional.setNombre(nombre);
-        profesional.setApellido1(apellido);
+        profesional.setApellido1(apellido1);
+        profesional.setApellido2(apellido2);
         profesional.setFechaNacimiento(fechaNac);
         profesional.setRun(run);
         profesional.setTipoUsuario(2);
@@ -164,8 +171,10 @@ public class Main {
         String nombre = sc.next();
 
 
-        System.out.println("Ingrese apellido: ");
+        System.out.println("Ingrese apellido paterno: ");
         String apellido1 = sc.next();
+        System.out.println("Ingrese apellido materno: ");
+        String apellido2 = sc.next();
 
         String fechaNac = "";
         boolean fechaValida = false;
@@ -216,6 +225,7 @@ public class Main {
 
         administrativo.setNombre(nombre);
         administrativo.setApellido1(apellido1);
+        administrativo.setApellido2(apellido2);
         administrativo.setFechaNacimiento(fechaNac);
         administrativo.setRun(run);
         administrativo.setTipoUsuario(3);
