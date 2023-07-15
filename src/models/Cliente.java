@@ -3,6 +3,15 @@ package models;
 
 import java.time.LocalDate;
 
+/**
+ *  Clase que representa a un cliente
+ *
+ * @author AlfaOmega
+ * @version 1.0
+ */
+
+
+
 public class Cliente extends Usuario{
     private String razonSocial;
     private int RUT;
@@ -13,7 +22,15 @@ public class Cliente extends Usuario{
 
     public Cliente() {
     }
+    /**
+     * @param razonSocial el nombre de la empresa
+     * @param RUT el registro tributario de la empresa
+     * @param telefonoRepresentante el telefono del cliente
+     * @param direccionEmpresa La direccion del cliente
+     * @param comunaEmpresa La comuna de la direccion
+     */
 
+    // Constructor
     public Cliente(String razonSocial, int RUT, long telefonoRepresentante, String direccionEmpresa, String comunaEmpresa) {
         this.razonSocial = razonSocial;
         this.RUT = RUT;
@@ -31,6 +48,11 @@ public class Cliente extends Usuario{
         this.comunaEmpresa = comunaEmpresa;
     }
 
+    /**
+     * Obtiene el nombre de la empresa.
+     *
+     * @return El nombre de la empresa.
+     */
     public String getRazonSocial() {
         return razonSocial;
     }
@@ -71,6 +93,12 @@ public class Cliente extends Usuario{
         this.comunaEmpresa = comunaEmpresa;
     }
 
+    /**
+     * Obtiene el nombre del cliente en un formato legible.
+     * El nombre incluye la razón social, el RUT y la dirección de la empresa.
+     *
+     * @return el nombre del cliente en formato legible
+     */
     public String obtenerNombre() {
         StringBuilder sb = new StringBuilder();
 
@@ -81,6 +109,10 @@ public class Cliente extends Usuario{
         return sb.toString();
     }
 
+    /**
+     * Realiza un análisis detallado del usuario, mostrando su dirección y comuna.
+     * La información básica del usuario se obtiene de la clase padre.
+     */
     @Override
     public void analizarUsuario() {
         super.analizarUsuario();
@@ -92,6 +124,11 @@ public class Cliente extends Usuario{
         System.out.println(sb);
     }
 
+    /**
+     * Devuelve una representación en formato de cadena de texto del objeto Cliente.
+     *
+     * @return La representación en formato de cadena de texto del objeto Cliente.
+     */
     @Override
     public String toString() {
         return  "nombre: " + this.getNombre() + "\n" +
