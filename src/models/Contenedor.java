@@ -14,20 +14,44 @@ public class Contenedor {
         this.listaUsuarios = new ArrayList<>();
     }
 
+    /**
+     *
+     * @param cliente
+     * Metodo que permite guardar un objeto de tipo Cliente.
+     */
     public void almacenarCliente(Cliente cliente) {
         this.listaUsuarios.add(cliente);
     }
+
+    /**
+     *
+     * @param profesional
+     * Metodo que permite guardar un objeto de tipo Profesional.
+     */
     public void almacenarProfesional(Profesional profesional) {
         this.listaUsuarios.add(profesional);
     }
+
+    /**
+     *
+     * @param administrativo
+     * Metodo que permite guardar un objeto de tipo Administrativo.
+     */
     public void almacenarAdministrativo(Administrativo administrativo) {
         this.listaUsuarios.add(administrativo);
     }
 
+    /**
+     * @param run
+     * Permite obtener un Usuario por su rut y posteriormente eliminarlo.
+     */
     public void eliminarUsuario(int run) {
         listaUsuarios.removeIf(usuario -> usuario.getRun() == run);
     }
 
+    /**
+     * Recorre una lista de usuarios mostrando algunos datos por pantalla.
+     */
     public void listarUsuarios (){
         for (Usuario usuario : this.listaUsuarios){
             System.out.println("Nombre: " + usuario.getNombre());
@@ -38,10 +62,18 @@ public class Contenedor {
         }
     }
 
+    /**
+     *
+     * @return List<Usuario>
+     * Retorna una lista de usuarios almacenados.
+     */
     public List<Usuario> getListaUsuarios() {
         return listaUsuarios;
     }
 
+    /**
+     * Recorre una lista de Usuarios.
+     */
     public void listarUsuariosPorTipo (){
         for (IUsuario usuario : listaUsuarios){
             System.out.println("Nombre: " + usuario.getNombre());
@@ -52,8 +84,11 @@ public class Contenedor {
         }
     }
 
+    /**
+     * Muestra una lista de usuarios dependiendo del tipo.
+     * @param tipoUsuario
+     */
     public void listarUsuariosPorTipo(int tipoUsuario) {
-
 
         for (Usuario usuario : listaUsuarios) {
 

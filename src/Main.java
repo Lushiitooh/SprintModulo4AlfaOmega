@@ -33,6 +33,7 @@ public class Main {
 
         System.out.println("Ingrese nombre: ");
         String nombre = sc.next();
+
         System.out.println("Ingrese apellido: ");
         String apellido = sc.next();
 
@@ -53,6 +54,8 @@ public class Main {
 
         System.out.println("Ingrese su numero de run: ");
         int run = sc.nextInt();
+
+
         System.out.println("Razon social: ");
         String razonSocial = sc.next();
         System.out.println("Ingrese su rut: ");
@@ -146,6 +149,7 @@ public class Main {
 
         System.out.println("Ingrese nombre: ");
         String nombre = sc.next();
+
 
         System.out.println("Ingrese apellido: ");
         String apellido1 = sc.next();
