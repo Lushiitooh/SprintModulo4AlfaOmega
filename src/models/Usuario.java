@@ -5,6 +5,11 @@ import service.IUsuario;
 import java.time.LocalDate;
 import java.time.Period;
 
+/**
+ * Esta clase define los objetos que necesito el usuario
+ * @author AlfaOmega
+ * @version 1.0
+ */
 public class Usuario implements IUsuario {
     private String nombre; // obligatorio
     private String apellido1; // obligatorio
@@ -15,7 +20,15 @@ public class Usuario implements IUsuario {
 
     public Usuario() {
     }
-
+    /**
+     * Constructor para los datos del usuario
+     * @param nombre El parámetro nombre define el nombre del usuario
+     * @param apellido1 El parámetro apellido1 define el primer apellido del usuario
+     * @param apellido2 El parámetro apellido2 define el segundo apellido del usuario
+     * @param fechaNacimiento El parámetro fechaNacimiento define la fecha de nacimiento del usuario
+     * @param run El parámetro run define el número de identificación del usuario
+     * @param tipoUsuario el parámetro tipoUsuario define el tipo de usuario que es la persona en cuestión
+     */
     public Usuario(String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, int run, int tipoUsuario) {
         this.nombre = nombre;
         this.apellido1 = apellido1;
