@@ -118,8 +118,21 @@ public class Main {
         int run = sc.nextInt();
         System.out.println("Ingrese título: ");
         String titulo = sc.next();
-        System.out.println("Ingrese fecha de ingreso: ");
-        String fechaIngreso = sc.next();
+
+        String fechaIngreso = "";
+        boolean fechaValidaProfesional = false;
+
+        while (!fechaValidaProfesional) {
+            System.out.println("indique fecha de ingreso (año-mes-dia): ");
+            fechaIngreso = sc.next();
+
+            try {
+                LocalDate.parse(fechaIngreso);
+                fechaValidaProfesional = true;
+            } catch (DateTimeParseException e) {
+                System.out.println("Fecha inválida. Intente nuevamente.");
+            }
+        }
 
         profesional.setNombre(nombre);
         profesional.setApellido1(apellido);
