@@ -4,6 +4,13 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Random;
 
+/**
+ *  Clase que representa las capacitaciones
+ *
+ * @author AlfaOmega
+ * @version 1.0
+ */
+
 public class Capacitacion {
     private int id;
     private int rutCliente; // empresa
@@ -13,11 +20,21 @@ public class Capacitacion {
     private int duracion; // minutos
     private int cantAsistentes; // <1000 obligatorio
 
+
     public Capacitacion() {
         Random rd = new Random();
         this.cantAsistentes = rd.nextInt(1, 999);
     }
 
+    /**
+     * @param id El ID de la capacitación
+     * @param rutCliente El RUT de la empresa
+     * @param dia La fecha de la capacitación
+     * @param hora La hora de la capacitación
+     *  @param lugar El lugar de la capacitación
+     *   @param duracion los minutos de la capacitación
+     * @param cantAsistentes La cantidad de asistentes
+     */
     public Capacitacion(int id, int rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantAsistentes) {
         this.id = id;
         this.rutCliente = rutCliente;
@@ -82,6 +99,11 @@ public class Capacitacion {
         this.cantAsistentes = cantAsistentes;
     }
 
+    /**
+     * Devuelve una representación en forma de cadena de la capacitación.
+     *
+     * @return Cadena que representa la capacitación.
+     */
     @Override
     public String toString() {
         return "Capacitacion{" +
@@ -95,6 +117,9 @@ public class Capacitacion {
                 '}';
     }
 
+    /**
+     * Muestra los detalles de la capacitación.
+     */
     public void mostrarDetalles() {
         StringBuilder sb = new StringBuilder();
 
